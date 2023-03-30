@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RiddleViewController" customModule="MiniGames" customModuleProvider="target">
+            <connections>
+                <outlet property="answerTable" destination="pjG-TC-bS8" id="JUa-MH-XrS"/>
+                <outlet property="questionContainerView" destination="McA-2i-mSw" id="OWf-pv-5i5"/>
+                <outlet property="questionLabel" destination="F0K-As-tq5" id="LlY-Ji-3tx"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" style="plain" rowHeight="100" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="pjG-TC-bS8">
+                    <rect key="frame" x="16" y="359" width="349" height="451"/>
+                    <color key="backgroundColor" red="0.0" green="0.26244415900000001" blue="0.25262112530000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="tintColor" systemColor="tintColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="451" id="mhh-WT-t6w"/>
+                    </constraints>
+                    <color key="separatorColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="McA-2i-mSw">
+                    <rect key="frame" x="16" y="103" width="358" height="223"/>
+                    <subviews>
+                        <label clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="F0K-As-tq5">
+                            <rect key="frame" x="4" y="4" width="350" height="215"/>
+                            <color key="backgroundColor" red="0.15196388413744627" green="0.58510874738596907" blue="0.10226529513109126" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <attributedString key="attributedText">
+                                <fragment content="Question">
+                                    <attributes>
+                                        <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                        <font key="NSFont" size="18" name="CourierNewPS-BoldMT"/>
+                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                    </attributes>
+                                </fragment>
+                            </attributedString>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.07764766890332192" green="0.57102866124625162" blue="0.089733790003648131" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="F0K-As-tq5" firstAttribute="leading" secondItem="McA-2i-mSw" secondAttribute="leading" constant="4" id="3fx-t0-eKB"/>
+                        <constraint firstItem="F0K-As-tq5" firstAttribute="top" secondItem="McA-2i-mSw" secondAttribute="top" constant="4" id="JVC-lM-qk5"/>
+                        <constraint firstAttribute="trailing" secondItem="F0K-As-tq5" secondAttribute="trailing" constant="4" id="bN6-r2-tZV"/>
+                        <constraint firstAttribute="bottom" secondItem="F0K-As-tq5" secondAttribute="bottom" constant="4" id="yzl-y1-PTJ"/>
+                    </constraints>
+                </view>
+                <button clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" role="cancel" translatesAutoresizingMaskIntoConstraints="NO" id="vjb-vj-4l0">
+                    <rect key="frame" x="317" y="47" width="57" height="46"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="46" id="fRp-Fj-MZG"/>
+                    </constraints>
+                    <color key="tintColor" systemColor="systemRedColor"/>
+                    <buttonConfiguration key="configuration" style="plain" image="xmark" catalog="system" cornerStyle="large">
+                        <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="25"/>
+                    </buttonConfiguration>
+                    <connections>
+                        <action selector="quitButtonTapped:" destination="-1" eventType="touchUpInside" id="4u2-TG-aVA"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G0K-Io-7b3">
+                    <rect key="frame" x="4" y="45" width="72.666666666666671" height="50"/>
+                    <buttonConfiguration key="configuration" style="plain" image="repeat" catalog="system">
+                        <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="30"/>
+                    </buttonConfiguration>
+                    <connections>
+                        <action selector="restartButtonTapped:" destination="-1" eventType="touchUpInside" id="MeE-Ry-ErN"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" red="0.044637508690357208" green="0.11468956619501114" blue="0.059874556958675385" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="vjb-vj-4l0" firstAttribute="trailing" secondItem="i5M-Pr-FkT" secondAttribute="trailingMargin" id="5ft-ug-dfW"/>
+                <constraint firstItem="pjG-TC-bS8" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="8xH-Jw-eqb"/>
+                <constraint firstItem="McA-2i-mSw" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leadingMargin" id="Ana-QN-wG6"/>
+                <constraint firstItem="vjb-vj-4l0" firstAttribute="trailing" secondItem="McA-2i-mSw" secondAttribute="trailing" id="HgY-a6-6ua"/>
+                <constraint firstItem="McA-2i-mSw" firstAttribute="leading" secondItem="pjG-TC-bS8" secondAttribute="leading" id="Jbj-gO-PdF"/>
+                <constraint firstItem="vjb-vj-4l0" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Mbf-8z-UDP"/>
+                <constraint firstItem="G0K-Io-7b3" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="4" id="UU1-BN-iQu"/>
+                <constraint firstItem="pjG-TC-bS8" firstAttribute="top" secondItem="McA-2i-mSw" secondAttribute="bottom" constant="33" id="eja-ha-szS"/>
+                <constraint firstItem="McA-2i-mSw" firstAttribute="top" secondItem="vjb-vj-4l0" secondAttribute="bottom" constant="10" id="fe8-yU-9iv"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="pjG-TC-bS8" secondAttribute="trailing" constant="25" id="ri2-oQ-AsY"/>
+                <constraint firstItem="McA-2i-mSw" firstAttribute="top" secondItem="G0K-Io-7b3" secondAttribute="bottom" constant="8" symbolic="YES" id="tbg-9q-dZz"/>
+            </constraints>
+            <point key="canvasLocation" x="-64.615384615384613" y="-72.511848341232223"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="repeat" catalog="system" width="128" height="98"/>
+        <image name="xmark" catalog="system" width="128" height="113"/>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

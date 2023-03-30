@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="JokesViewController" customModule="MiniGames" customModuleProvider="target">
+            <connections>
+                <outlet property="doneButton" destination="tBc-Gy-9b4" id="jf1-77-dbt"/>
+                <outlet property="jokesTable" destination="iFf-lk-Rtt" id="dfu-5w-q0T"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="124503579-background-frame-with-smiling-winking-and-mouth-licking-emoji-with-stuck-out-tongue" translatesAutoresizingMaskIntoConstraints="NO" id="aA4-fc-EUP">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                </imageView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="140" estimatedRowHeight="-1" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="iFf-lk-Rtt">
+                    <rect key="frame" x="31" y="186.66666666666666" width="331" height="502.33333333333337"/>
+                    <color key="backgroundColor" red="0.85342222270000001" green="0.68122512599999996" blue="0.0063810472619999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tBc-Gy-9b4">
+                    <rect key="frame" x="319" y="138" width="58" height="43.666666666666657"/>
+                    <buttonConfiguration key="configuration" style="plain" image="xmark" catalog="system">
+                        <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="25" scale="large" weight="bold"/>
+                    </buttonConfiguration>
+                    <connections>
+                        <action selector="doneTapped:" destination="-1" eventType="touchUpInside" id="Xa7-Sl-mVm"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" red="0.85342222270000001" green="0.68122512599999996" blue="0.0063810472619999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="aA4-fc-EUP" secondAttribute="trailing" id="49q-fa-Zz3"/>
+                <constraint firstItem="iFf-lk-Rtt" firstAttribute="top" secondItem="tBc-Gy-9b4" secondAttribute="bottom" constant="5" id="4ub-Dq-KOg"/>
+                <constraint firstItem="tBc-Gy-9b4" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="79" id="FyV-ui-pA8"/>
+                <constraint firstItem="tBc-Gy-9b4" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="319" id="GFH-1J-qUl"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="aA4-fc-EUP" secondAttribute="bottom" constant="-34" id="GFn-kE-nSP"/>
+                <constraint firstItem="aA4-fc-EUP" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="-59" id="Kd2-FS-vid"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="iFf-lk-Rtt" secondAttribute="trailing" constant="31" id="LtI-ib-A1d"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="tBc-Gy-9b4" secondAttribute="trailing" constant="16" id="MMo-MC-B22"/>
+                <constraint firstItem="aA4-fc-EUP" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="PuG-k7-LgC"/>
+                <constraint firstItem="iFf-lk-Rtt" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="31" id="gWo-Ak-hCH"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="iFf-lk-Rtt" secondAttribute="bottom" constant="129" id="mTo-a0-9cg"/>
+            </constraints>
+            <point key="canvasLocation" x="-37.404580152671755" y="19.718309859154932"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="124503579-background-frame-with-smiling-winking-and-mouth-licking-emoji-with-stuck-out-tongue" width="1300" height="1300"/>
+        <image name="xmark" catalog="system" width="128" height="113"/>
+    </resources>
+</document>
